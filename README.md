@@ -43,6 +43,6 @@ ping other server from ansible server using user and password
 6. order of task doesn't matter in ansible-playbook (Declarative)
 
 7. Run ansible playbook
-    ansible-playbook -i 172.31.76.171, -e ansible_user=username -e ansible_password=password frontend.yml (push machanism)
+    ansible-playbook -i private_ip, -e ansible_user=username -e ansible_password=password frontend.yml (push machanism)
 
 
