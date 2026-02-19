@@ -12,6 +12,10 @@
         name: nginx
         state: latest
 
+    - name: Removing old app content
+      ansible.builtin.file:
+        path: /usr/share/nginx/html/*
+        state: absent
 
 
 
