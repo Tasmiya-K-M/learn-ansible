@@ -20,7 +20,7 @@
     - name: downloading frontend Content
       ansible.builtin.unarchive:
         src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-        dest: /tmp/frontend.zip
+        dest: /tmp/
         remote_src: yes
 
 
