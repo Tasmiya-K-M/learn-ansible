@@ -16,8 +16,12 @@
       ansible.builtin.file:
         path: /usr/share/nginx/html/*
         state: absent
-
-
+    
+    - name: downloading frontend Content
+      ansible.builtin.unarchive:
+        src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+        dest: /tmp/frontend.zip
+        remote_src: yes
 
 
 
