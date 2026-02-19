@@ -3,7 +3,7 @@
   tasks:
     - name: Set a hostname
       ansible.builtin.hostname:
-        name: frondend
+        name: frontend
 
     - name: Installing Nginx
       ansible.builtin.yum:
