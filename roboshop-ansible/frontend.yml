@@ -1,5 +1,5 @@
 - name: frontend
-  # hosts: all
+  hosts: all
   become: yes
   tasks:
     - name: Set a hostname
