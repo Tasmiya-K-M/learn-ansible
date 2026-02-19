@@ -4,7 +4,7 @@
   tasks:
     - name: Set a hostname
       ansible.builtin.hostname:
-        name: hostname
+        name: frontend
         use: systemd
 
     - name: Installing Nginx
