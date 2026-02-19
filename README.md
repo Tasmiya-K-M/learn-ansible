@@ -43,6 +43,8 @@ ping other server from ansible server using user and password
 6. order of task doesn't matter in ansible-playbook (Declarative)
 
 7. Run ansible playbook
-    ansible-playbook -i private_ip, -e ansible_user=username -e ansible_password=password frontend.yml (push machanism)
+    ansible-playbook -i private_ip, -e ansible_user=username -e ansible_password=password frontend.yml (push machanism - we will run on master node)
+
+8. ansible-pull -i localhost, -U repo_url  frontend.yml (pull machanism - we will run on worker nodes and ansible should be there) 
 
 
