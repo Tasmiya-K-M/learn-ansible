@@ -2,7 +2,9 @@
   hosts: all
   tasks:
     - name: Set a hostname
-      command: hostnamectl set-hostname frontend
+      ansible.builtin.hostname:
+        name: hostname
+        use: systemd
 
     - name: Installing Nginx
       ansible.builtin.yum:
