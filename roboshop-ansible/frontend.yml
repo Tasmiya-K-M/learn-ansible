@@ -20,9 +20,24 @@
     - name: downloading frontend Content
       ansible.builtin.unarchive:
         src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-        dest: /tmp/
+        dest: /usr/share/nginx/html/
         remote_src: yes
 
+    - name: If follow=yes, /path/to/file will be overwritten by contents of foo.conf
+      ansible.builtin.copy:
+        src: /home/centos/learn-ansible/roboshop-ansible/roboshop.conf
+        dest: /etc/nginx/default.d/
+        follow: yes
+
+    - name: Enable service httpd, and not touch the state
+      ansible.builtin.service:
+        name: nginx
+        enabled: yes
+
+    - name: Restart service httpd, in all cases
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
 
 
     # echo -e "${color}setting the hostname${nocolor}"
