@@ -8,7 +8,7 @@
         use: systemd
 
     - name: Installing Nginx
-      ansible.builtin.yum:
+      ansible.builtin.dnf:
         name: ngnix
         state: latest
 
