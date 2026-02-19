@@ -20,7 +20,7 @@
 
     - name: Creating Nginx Reverse Proxy Configuration
       ansible.builtin.copy:
-        src: /home/centos/learn-ansible/roboshop-ansible/roboshop.conf
+        src: roboshop.conf
         dest: /etc/nginx/default.d/
         follow: yes
 
