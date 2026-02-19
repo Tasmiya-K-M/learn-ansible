@@ -37,3 +37,7 @@ ping other server from ansible server using user and password
        course: Devops
        time: 730am
     c: { course: Devops; time: 730am}. --> dict
+
+5. Ansible playbook has list of plays, the play must have tasks or roles
+
+
