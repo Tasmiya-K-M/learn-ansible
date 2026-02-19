@@ -1,5 +1,6 @@
 - name: frontend
   hosts: all
+  become: yes
   tasks:
     - name: Set a hostname
       ansible.builtin.hostname:
