@@ -40,4 +40,6 @@ ping other server from ansible server using user and password
 
 5. Ansible playbook has list of plays, the play must have tasks or roles
 
+6. order of task doesn't matter in ansible-playbook
+
 
