@@ -2,7 +2,7 @@
 - name: include tasks file
   hosts: all
   tasks:
-    - name: include tasks file
+    - name: print hello world
       ansible.builtin.debug:
         msg: hello world 
 
