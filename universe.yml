@@ -1,4 +1,4 @@
-- name: universe file
+- name: Demo universe file
   hosts: all
   tasks:
     - name: universe file
