@@ -47,4 +47,8 @@ ping other server from ansible server using user and password
 
 8. ansible-pull -i localhost, -U repo_url  frontend.yml (pull machanism - we will run on worker nodes and ansible should be there) 
 
+9. load yml file in playbook
+
+10. declare variables in playbook
+
 
