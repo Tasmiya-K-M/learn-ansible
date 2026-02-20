@@ -1,7 +1,7 @@
 - name: Declare variable
   hosts: all
   vars:
-    URL: example.cpm
+    URL: example.com
   tasks:
     - name: printing variable
       ansible.builtin.debug:
