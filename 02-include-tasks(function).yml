@@ -1,0 +1,11 @@
+# how to load a another file
+- name: include tasks file
+  hosts: all
+  tasks:
+    - name: include tasks file
+      ansible.builtin.debug:
+        msg: hello world 
+
+    - name: Include task list in play
+      ansible.builtin.include_tasks:
+        file: universe.yml
