@@ -51,4 +51,6 @@ ping other server from ansible server using user and password
 
 10. declare variables in playbook
 
+11. roles are used to organize and reuse automation code in a clean, structured way.
+
 
