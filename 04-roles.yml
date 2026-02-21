@@ -1,4 +1,12 @@
+# to run locally use below code
 - name : Demo on Roles
-  hosts: all
+  hosts: localhost
+  connection: local
   roles:
     - sample
+
+
+# - name : Demo on Roles
+#   hosts: all
+#   roles:
+#     - sample
