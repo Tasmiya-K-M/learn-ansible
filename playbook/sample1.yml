@@ -1,16 +1,7 @@
 - hosts: worker
-  name: demo on command module
+  name: demo on modules
   become: yes
   tasks:
-    - name : printing date
-      command: date
-      register: result
-    - name : printing resolve.conf file
-      command: cat /etc/resolv.conf  
-    - name : printing resolve.conf file using chdir option
-      command: cat resolv.conf  chdir=/etc
-    - name : creating directory
-      command: mkdir /folder creates=/folder
-    - name : displaying result output
-      debug:
-        var: result.stdout
+    - name : script demo
+      script: demo.sh
+   
