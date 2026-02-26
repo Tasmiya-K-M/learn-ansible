@@ -1,12 +1,12 @@
 - hosts: worker
-  name: demo on modules
-  become: yes
+  name: templating demo
+  vars:
+    http_port: 8005
   tasks:
-    - name : demo on replacing word
-      lineinfile:
-        path: /home/centos/text.txt
-        regexp: "tasmiya"
-        line: tasmiya1
+    - name : templating demo
+      template:
+        src: demo.j2
+        dest: /home/centos/
         
         
    
