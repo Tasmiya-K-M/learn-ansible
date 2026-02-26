@@ -4,8 +4,10 @@
     http_port: 8005
   tasks:
     - name : templating demo
-      copy:
+      lineinfile:
         src: demo.j2
+        regexp: "{{inventory_hostname}}"
+        line: worker
         dest: /home/centos/
         
         
