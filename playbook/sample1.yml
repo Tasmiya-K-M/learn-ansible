@@ -4,7 +4,7 @@
   tasks:
     - name : demo on replacing word
       lineinfile:
-        path: /home/centos
+        path: /home/centos/text.txt
         line: hellooooo
         
         
