@@ -4,8 +4,11 @@
   tasks:
     - name : printing date
       command: date
+      register: result
     - name : printing resolve.conf file
       command: cat /etc/resolv.conf  
+      debug:
+        var: result.stdout
     - name : printing resolve.conf file using chdir option
       command: cat resolv.conf  chdir=/etc
     - name : creating directory
