@@ -5,7 +5,8 @@
     - name : demo on replacing word
       lineinfile:
         path: /home/centos/text.txt
-        line: hellooooo
+        regexp: "tasmiya"
+        line: tasmiya1
         
         
    
