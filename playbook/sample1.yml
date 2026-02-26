@@ -2,6 +2,8 @@
   name: demo on modules
   become: yes
   tasks:
-    - name : script demo
-      script: demo.sh
+    - name : demo on service
+      service: name=nginx state=restart
+        
+        
    
