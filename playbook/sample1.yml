@@ -2,8 +2,10 @@
   name: demo on modules
   become: yes
   tasks:
-    - name : demo on service
-      service: name=nginx state=restarted
+    - name : demo on replacing word
+      lineinfile:
+        path: /home/centos
+        line: hellooooo
         
         
    
