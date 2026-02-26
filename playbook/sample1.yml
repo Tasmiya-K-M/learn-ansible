@@ -1,7 +1,7 @@
 - hosts: worker
   name: play1
   vars:
-    name:
+    names:
       - tasmiya
       - tasmiya1
       - tasmiya2
@@ -10,4 +10,4 @@
     - name : printing list item
       debug: 
         msg: loop elements {{item}}
-      with_items: "{{name}}"
+      with_items: "{{names}}"
