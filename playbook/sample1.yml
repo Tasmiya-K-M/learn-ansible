@@ -4,8 +4,8 @@
     - name : printing date
       command: date
     - name : printing resolve.conf file
-      command: cat /etc/resolve.conf
+      command: cat /etc/resolv.conf  
     - name : printing resolve.conf file using chdir option
-      command: cat resolve.conf chdir=/etc
+      command: cat resolv.conf  chdir=/etc
     - name : creating directory
       command: mkdir /folder creates=/folder
