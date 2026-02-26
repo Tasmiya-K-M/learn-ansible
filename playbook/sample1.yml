@@ -4,7 +4,7 @@
     http_port: 8005
   tasks:
     - name : templating demo
-      template:
+      copy:
         src: demo.j2
         dest: /home/centos/
         
