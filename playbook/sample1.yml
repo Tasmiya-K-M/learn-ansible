@@ -1,13 +1,11 @@
 - hosts: worker
-  name: play1
-  vars:
-    names:
-      - tasmiya
-      - tasmiya1
-      - tasmiya2
-      - tasmiya3
+  name: demo on command module
   tasks:
-    - name : printing list item
-      debug: 
-        msg: loop elements {{item}}
-      with_items: "{{names}}"
+    - name : printing date
+      command: date
+    - name : printing resolve.conf file
+      command: cat /etc/resolve.conf
+    - name : printing resolve.conf file using chdir option
+      command: cat resolve.conf chdir=/etc
+    - name : creating directory
+      command: mkdir /folder creates=/folder
