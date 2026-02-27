@@ -4,6 +4,10 @@
   gather_facts: no
   tasks:
     - name: running long query script
+      copy:
+        src: long_script.sh
+        dest: /opt
+    - name: running long query script
       command: /opt/long_script.sh
       async: 20
       poll: 0
