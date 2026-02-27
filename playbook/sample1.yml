@@ -1,7 +1,5 @@
-- name: template demo
+- name: creating role
   hosts: worker
   tasks:
-    - name: my first tasks
-      template:
-        src: demo.j2
-        dest: /home/centos
+    - name: creating role
+      command: ansible-galaxy init apache
