@@ -1,23 +1,9 @@
 ---
 - name: Async demo
   hosts: worker
-  gather_facts: no
-  become: yes
   tasks:
     - name: copying the script
-      copy:
-        src: long_script.sh
-        dest: /opt
-        mode: '0755' 
-    - name: running long query script
-      command: /opt/long_script.sh
-      async: 20
-      poll: 0
-      register: job_result
-    - name: wait for job to complete
-      async_status:
-        jid: "{{job_result.ansible_job_id}}"
-      register: job_status
-      until: job_status.finished
-      retries: 15
-      delay: 10
+      service:
+        name: sample service
+        state: restarted
+      ignore_errors: yes
