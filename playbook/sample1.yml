@@ -2,6 +2,7 @@
 - name: Async demo
   hosts: worker
   gather_facts: no
+  become: yes
   tasks:
     - name: running long query script
       copy:
