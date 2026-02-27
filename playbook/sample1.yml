@@ -1,18 +1,17 @@
 ---
-- name: Simple Collections Demo
-  hosts: localhost
+- name: Async demo
+  hosts: worker
   gather_facts: no
   tasks:
-    - name: Run a long shell script asynchronously
-      command: /opt/long_script.sh
-      async: 600   # Max seconds to run
-      poll: 0      # Fire and forget (don't wait for completion)
+    - name: running long query script
+      command: long_script.sh
+      async: 20
+      poll: 0
       register: job_result
-
-    - name: Check async job status
-      async_status:
-        jid: "{{ job_result.ansible_job_id }}"
+    - name: wait for job to complete
+      async.status:
+        job_id: "{{job_result.ansible_job_id}}"
       register: job_status
       until: job_status.finished
-      retries: 5
+      retry: 5
       delay: 10
