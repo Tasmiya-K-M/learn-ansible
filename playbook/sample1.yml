@@ -9,7 +9,7 @@
       poll: 0
       register: job_result
     - name: wait for job to complete
-      async.status:
+      async_status:
         jid: "{{job_result.ansible_job_id}}"
       register: job_status
       until: job_status.finished
