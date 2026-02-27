@@ -1,7 +1,5 @@
 - name: template demo
   hosts: worker
-  vars:
-    first_name:
   tasks:
     - name: my first tasks
       template:
