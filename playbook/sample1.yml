@@ -3,11 +3,8 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - name: Generate random string using community.general
-      community.general.random_string:
-        length: 6
-      register: rand_result
-
-    - name: Show random string
-      debug:
-        var: rand_result.random_string
+    - name: Use sysctl from community.general
+      community.general.sysctl:
+        name: net.ipv4.ip_forward
+        value: '1'
+        state: present
