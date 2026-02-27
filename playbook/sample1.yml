@@ -19,5 +19,5 @@
         jid: "{{job_result.ansible_job_id}}"
       register: job_status
       until: job_status.finished
-      retries: 5
+      retries: 15
       delay: 10
