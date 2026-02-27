@@ -1,5 +1,13 @@
-- name: creating role
-  hosts: worker
+- name: Simple collection demo
+  hosts: localhost
+  gather_facts: no
+
   tasks:
-    - name: creating role
-      command: ansible-galaxy install geerlingguy.apache
+    - name: Generate random string
+      community.general.random_string:
+        length: 6
+      register: result
+
+    - name: Show random string
+      debug:
+        var: result.random_string
