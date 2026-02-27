@@ -4,5 +4,5 @@
   tasks:
     - name: print username from csv file
       debug:
-        msg: "{{lookup('csvfile','user1 file=user.csv delimeter=,')}}"
+        msg: "{{lookup('csvfile','user1 file=user.csv delimiter=,')}}"
     
