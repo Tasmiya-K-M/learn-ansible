@@ -1,13 +1,15 @@
-- name: Collection demo for older Ansible
+---
+- name: Simple Collections Demo
   hosts: localhost
   gather_facts: no
+  collections:
+    - community.general   # Declaring collection (conceptual)
 
   tasks:
-    - name: Create a temporary file
-      community.general.tempfile:
-        state: file
-      register: temp_result
+    - name: Say hello (built-in module)
+      command: echo "Hello from collections demo"
+      register: result
 
-    - name: Show temp file path
+    - name: Show the output
       debug:
-        var: temp_result.path
+        var: result.stdout
