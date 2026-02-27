@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: running long query script
-      command: long_script.sh
+      command: /opt/long_script.sh
       async: 20
       poll: 0
       register: job_result
