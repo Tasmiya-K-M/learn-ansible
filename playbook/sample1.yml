@@ -1,13 +1,11 @@
 - name: Simple collection demo
   hosts: localhost
   gather_facts: no
-
   tasks:
     - name: Generate random string
       community.general.random_string:
         length: 6
       register: result
-
     - name: Show random string
       debug:
         var: result.random_string
