@@ -1,0 +1,9 @@
+- name: template demo
+  hosts: worker
+  vars:
+    first_name: Tasmiya
+  tasks:
+    - name: my first tasks
+      template:
+        src: demo.j2
+        dest: /home/centos
