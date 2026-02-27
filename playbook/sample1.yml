@@ -2,4 +2,4 @@
   hosts: worker
   tasks:
     - name: creating role
-      command: ansible-galaxy init apache
+      command: ansible-galaxy install geerlingguy.apache
