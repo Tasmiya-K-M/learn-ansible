@@ -2,14 +2,12 @@
 - name: Simple Collections Demo
   hosts: localhost
   gather_facts: no
-  collections:
-    - community.general   # Declaring collection (conceptual)
-
   tasks:
-    - name: Say hello (built-in module)
-      command: echo "Hello from collections demo"
-      register: result
+    - name: Generate random string using community.general
+      community.general.random_string:
+        length: 6
+      register: rand_result
 
-    - name: Show the output
+    - name: Show random string
       debug:
-        var: result.stdout
+        var: rand_result.random_string
