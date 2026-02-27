@@ -2,7 +2,7 @@
 - name: Async demo
   hosts: worker
   tasks:
-    - name: copying the script
+    - name: service restart
       service:
         name: sample service
         state: restarted
