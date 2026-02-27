@@ -1,6 +1,6 @@
 ---
 - name: lookup demo
-  hosts: worker
+  hosts: worker1
   any_errors_fatal: true
   tasks:
     - name: print hello world from localhost
