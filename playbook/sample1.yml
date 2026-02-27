@@ -1,13 +1,8 @@
 ---
-- name: Async demo
+- name: lookup demo
   hosts: worker
   tasks:
-    - name: service restart
-      service:
-        name: sample service
-        state: restarted
-      ignore_errors: yes
-    - name: print statemnet
-      command: cat long_script.sh
-      register: result
-      failed_when: result.rc != 0
+    - name: print username from csv file
+      debug:
+        msg: "{{lookup('csvfile','user1 file=user.csv delimeter=,')}}"
+    
