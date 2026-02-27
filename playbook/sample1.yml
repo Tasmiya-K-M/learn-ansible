@@ -1,11 +1,14 @@
 ---
 - name: lookup demo
   hosts: worker1
-  # any_errors_fatal: true
   tasks:
     - name: print hello world from localhost
       debug:
         msg: hello world from localhost
+      tags:
+        - localhost_demo
     - name: print hello world from worker
       debug:
         msg: hello world from worker
+      tags:
+        - worker_demo
