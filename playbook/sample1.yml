@@ -10,8 +10,8 @@
       register: job_result
     - name: wait for job to complete
       async.status:
-        job_id: "{{job_result.ansible_job_id}}"
+        jid: "{{job_result.ansible_job_id}}"
       register: job_status
       until: job_status.finished
-      retry: 5
+      retries: 5
       delay: 10
