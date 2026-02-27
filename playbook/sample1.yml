@@ -1,11 +1,13 @@
-- name: Simple collection demo
+- name: Collection demo for older Ansible
   hosts: localhost
   gather_facts: no
+
   tasks:
-    - name: Generate random string
-      community.general.random_string:
-        length: 6
-      register: result
-    - name: Show random string
+    - name: Create a temporary file
+      community.general.tempfile:
+        state: file
+      register: temp_result
+
+    - name: Show temp file path
       debug:
-        var: result.random_string
+        var: temp_result.path
