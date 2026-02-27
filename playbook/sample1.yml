@@ -7,3 +7,6 @@
         name: sample service
         state: restarted
       ignore_errors: yes
+    - name: print statemnet
+      debug:
+        msg: hello from playbook
