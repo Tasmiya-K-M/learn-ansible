@@ -6,6 +6,6 @@
     - name: print hello world from localhost
       debug:
         msg: hello world from localhost
-    # - name: print hello world from worker
-    #   debug:
-    #     msg: hello world from worker
+    - name: print hello world from worker
+      debug:
+        msg: hello world from worker
