@@ -1,5 +1,5 @@
-{%for number in [0,1,2,3,4,5]%}
-{%if number == 2%}
-{{number}}
-{%endif%}
-{%endfor%}
+{{"/etc/hosts" | basename}}
+{{"c:\windows\hosts" | win_basename}}
+{{"c:\windows\hosts" | win_splitdrive}}
+{{"c:\windows\hosts" | win_splitdrive | first}}
+{{"c:\windows\hosts" | win_splitdrive | last}}
