@@ -1,8 +1,11 @@
 ---
 - name: lookup demo
   hosts: worker
+  any_errors_fatal: true
   tasks:
-    - name: print username from csv file
+    - name: print hello world from localhost
       debug:
-        msg: "{{lookup('csvfile','user1 file=user.csv delimiter=,')}}"
-    
+        msg: hello world from localhost
+    # - name: print hello world from worker
+    #   debug:
+    #     msg: hello world from worker
