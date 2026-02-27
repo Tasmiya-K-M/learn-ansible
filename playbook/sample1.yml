@@ -8,7 +8,6 @@
         state: restarted
       ignore_errors: yes
     - name: print statemnet
-      debug:
-        msg: hello from playbook
+      command: cat /opt/long_script.sh
       register: result
       failed_when: result.rc != 0
