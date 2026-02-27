@@ -8,6 +8,6 @@
         state: restarted
       ignore_errors: yes
     - name: print statemnet
-      command: cat /opt/long_script.sh
+      command: cat long_script.sh
       register: result
       failed_when: result.rc != 0
