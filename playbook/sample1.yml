@@ -5,7 +5,7 @@
     - name: print hello world
       debug:
         msg: Fruit name {{item}}
-      loops:
+      loop:
         - apple
         - banana
         - grapes
