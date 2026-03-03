@@ -5,6 +5,9 @@
     - name: print hello world
       debug:
         msg: Hello world
+      when: what == world
+
     - name: print hello universe
       debug:
         msg: Hello universe
+      when: what == universe
