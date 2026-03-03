@@ -2,11 +2,20 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: print hello world
+    - name: print list
       debug:
-        msg: Fruit name {{item}}
+        msg: Fruit name - {{item}}
       loop:
         - apple
         - banana
         - grapes
         - orange
+
+    - name: print dictionary
+      debug:
+        msg: Fruit name - {{item.name}} and quantity - {{item.quantity}}
+      loop:
+       - {name: apple, quantity: 100}
+       - {name: banana, quantity: 200}
+       - {name: grapes, quantity: 300}
+       - {name: orange, quantity: 400}
