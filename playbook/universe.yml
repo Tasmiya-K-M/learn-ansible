@@ -1,3 +1,0 @@
-- name: print hello world from universe
-  debug: 
-    msg: hello world from universe

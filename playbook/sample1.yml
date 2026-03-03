@@ -1,10 +1,10 @@
----
-- name: lookup demo
-  hosts: worker
+- name: printing statements
+  hosts: localhost
+  connection: local
   tasks:
     - name: print hello world
       debug:
-        msg: hello world 
-    - name: include task from another file
-      include_tasks:
-        file: universe.yml
+        msg: Hello world
+    - name: print hello universe
+      debug:
+        msg: Hello universe
